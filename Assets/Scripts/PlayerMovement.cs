@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator anim;
+    public SpriteRenderer spRen;
 
     public float playerSpeed = 5f;
     public float jumpForce = 5f;
@@ -21,14 +22,14 @@ public class PlayerMovement : MonoBehaviour
         if (h < 0f)
         {
 
-            transform.localScale = new Vector3(-10.0f, 10.0f, 10.0f);
+            SpriteRenderer.flipX = true;
 
         }
-        else if (h > 0.0f) 
+        else if (h > 0f) 
         {
-        
-            transform.localScale = new Vector3(10.0f, 10.0f, 10.0f);
-        
+
+            SpriteRenderer.flipX = false;
+
         }
 
         //jump
