@@ -5,7 +5,7 @@ using UnityEngine;
 public class SumetalMovement : MonoBehaviour
 {
     public float Speed;
-    public float JumForce;
+    public float JumpForce;
 
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
@@ -41,7 +41,7 @@ public class SumetalMovement : MonoBehaviour
 
     private void Jump()
     {
-        Rigidbody2D.AddForce(Vector2.up * JumForce);
+        Rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
 
     private void FixedUpdate()
